@@ -1,0 +1,11 @@
+body {
+  background-color: grey;
+}
+.columns {
+  background-color: grey;
+  border: 1px;
+  margin: 8px;
+  border-color: white;
+  border-radius: 28px 3px;
+  text-align: center;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Übersicht über <%= @titel %></title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation-flex.css">
+  <script src="//www.google.com/jsapi"></script>
+  <script src="chartkick.js"></script>
+  <!-- <script>var Chartkick = {"language": "de"};</script> -->
+</head>
+
+<body>
+  <ul class="menu">
+    <li class="active"><a href="#">One</a></li>
+    <li><a href="#">Two</a></li>
+    <li><a href="#">Three</a></li>
+    <li><a href="#">Four</a></li>
+  </ul>
+  <%= pie_chart({"Wasserstand" => @water_level, "Trockenheit" => 1-@water_level}) %>
+
+  <div>
+    <h1>Text</h1>
+  </div>
+  <div class="row">
+    <div class="small-11 large-4 columns"><h1>colum1</h1></div>
+    <div class="small-11 large-4 columns"><h1>colum2</h1></div>
+    <div class="small-11 large-4 columns"><h1>colum3</h1></div>
+  </div>
+  <div>
+    <h1>My first website</h1>
+    <h2>My first website</h2>
+    <h3>My first website</h3>
+    <h4>My first website</h4>
+    <h5>My first website</h5>
+    <h6>My first website</h6>
+    <b>Really?</b><br />
+    <a href="http://www.ruhmen.ch">This is a link!</a>
+    <ul>
+      <li>Point1</li>
+      <li>Point2</li>
+      <li>Point2</li>
+    </ul>
+    <ol>
+      <li>Point1</li>
+      <li>Point2</li>
+      <li>Point2</li>
+    </ol>
+  </div>
+  <div>
+    <blockquote>
+      <p>This is a quotation taken from the Mozilla Developer Center.</p>
+    </blockquote>
+    <p>
+      Lorem <i>ipsum</i> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <!-- This is a comment -->
+    <hr>
+    <img src="file:///Users/RomeoMacBookPro/Master21/week_04/tiny_cat_12573_8950.jpg" width="200">
+    <p>
+      Lorem <b>ipsum</b> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+      <a href="http://www.google.ch" target="_blank">This is a paragraph of text</a>
+    </p>
+  </div>
+</body>
+
+</html>
