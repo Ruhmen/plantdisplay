@@ -5,6 +5,7 @@
   <title>Pflanzen-Cockpit</title>
   <link rel="stylesheet" href="/base.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation-flex.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.js">
 </head>
 
 <body>
@@ -21,7 +22,6 @@
       menu_item_four = "active"
     end%>
 
-
     <ul class = "menu">
       <li class = "<%= menu_item_one %>"><a href="/">Pflanzenauswahl</a></li>
       <li class = "<%= menu_item_two %>"><a href="/palmi">Palmi-Daten</a></li>
@@ -32,10 +32,10 @@
   <div class="information">
     <h1>Willkommen beim Pflanzen-Cockpit</h1>
     <p>Wähle die gewünschte Pflanze aus:</p>
-    <ul class ="plant_choice">
+    <ul class="large-block-grid-4">
       <li>
-        <a href = "/palmi">
-          <img class="imageStyle" src="/palmi.jpg" alt="Palmi">
+        <a class="th" href = "/palmi">
+          <img class = "imageStyle" src="/palmi.jpg" alt="Palmi">
         </a>
       </li>
       <li>
