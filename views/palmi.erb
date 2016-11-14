@@ -9,12 +9,11 @@
   <script src="chartkick.js"></script>
   <!-- <script>var Chartkick = {"language": "de"};</script> -->
 </head>
-
 <body>
   <div class ="menu">
     <% menu_item_one, menu_item_two, menu_item_three, menu_item_four = "passive"%>
     <% case File.basename(__FILE__, ".erb"); when "home"; menu_item_one = "active";
-    when "palmi"; menu_item_two = "active"; when "whether"; menu_item_two = "active";
+    when "plant"; menu_item_two = "active"; when "whether"; menu_item_two = "active";
     when "time"; menu_item_two = "active"; end%>
 
     <ul class = "menu">
@@ -25,16 +24,9 @@
     </ul>
   </div>
   <div class="information">
-      <h1>Willkommen beim Pflanzen-Cockpit</h1>
-      <p>Wähle die gewünschte Pflanze aus:</p>
-      <a class="th" href = "/palmi.erb">
-        <img src="http://schlaues-zuhause.de/wp-content/uploads/2015/08/61aQXlNTLGL._SL1500_-1.jpg" alt="Palmi">
-      </a>
-
-      <ul class ="plant_choice">
-        <li><a href = "/palmi.erb"><img src="http://fr.ubergizmo.com/wp-content/uploads/2015/03/Koubachi-Wifi-Plant-Sensor-2_-10-1078x720.jpg" alt="Hausi" style="width:200px;"></a></li>
-      </ul>
+    <h1>Pflanzen-Cockpit von Palmi</h1>
+    <img src="http://schlaues-zuhause.de/wp-content/uploads/2015/08/61aQXlNTLGL._SL1500_-1.jpg" alt="Palmi" style="width:200px;">
+    <%= pie_chart({"Wasserstand" => @water_level, "Trockenheit" => 1-@water_level}) %><br/>
   </div>
-
 </body>
 </html>
