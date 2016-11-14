@@ -9,3 +9,6 @@ body {
   border-radius: 28px 3px;
   text-align: center;
 }
+img.imageStyle{
+border: 2px solid #ffffff
+}
