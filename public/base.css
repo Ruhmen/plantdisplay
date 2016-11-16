@@ -9,6 +9,14 @@ body {
   border-radius: 28px 3px;
   text-align: center;
 }
-img.imageStyle{
-border: 2px solid #ffffff
+table.table {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.rot {
+  color: red;
+
+  animation-duration: 1s;
+  animation-name: wobble;
 }

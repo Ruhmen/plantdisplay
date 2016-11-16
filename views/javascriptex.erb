@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Pflanzen-Cockpit</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation-flex.css">
+  <link rel="stylesheet" href="/animate.css">
+
+  <!-- <script types="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.js"> -->
+  <script src="//www.google.com/jsapi"></script>
+  <script src="chartkick.js"></script>
+    <!-- Neues JavaScript -->
+  <script types="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script types="text/javascript" src="/application.js"></script>
+</head>
+<body>
+  <div>
+    <ul class = "menu">
+      <li class = "<%= "active" if  @title == "home"%>"><a href="/">Pflanzenauswahl</a></li>
+      <li class = "<%= "active" if  @title == "palmi" %>"><a href="/palmi">Palmi-Daten</a></li>
+      <li class = "<%= "active" if  @title == "tatutata" %>"><a href="#">Tatütata</a></li>
+      <li class = "<%= "active" if  @title == "dingdong" %>"><a href="#">Dingdong</a></li>
+    </ul>
+  </div>
+  <br/>
+  <p>
+    <a href="#" class="button js-clickable">Toggle-Button</a>
+    <h2 class="js-target" style="text-align:center">Toggled Text</h2>
+  </p>
+</body>
+</html>
