@@ -9,24 +9,12 @@
 </head>
 
 <body>
-  <div class ="menu">
-    <% menu_item_one, menu_item_two, menu_item_three, menu_item_four = "passive"%>
-    <% case File.basename(__FILE__, ".erb")
-    when "home"
-      menu_item_one = "active"
-    when "palmi"
-      menu_item_two = "active"
-    when "whether"
-      menu_item_three = "active"
-    when "time"
-      menu_item_four = "active"
-    end%>
-
+  <div>
     <ul class = "menu">
-      <li class = "<%= menu_item_one %>"><a href="/">Pflanzenauswahl</a></li>
-      <li class = "<%= menu_item_two %>"><a href="/palmi">Palmi-Daten</a></li>
-      <li class = "<%= menu_item_three %>"><a href="#">Tatütata</a></li>
-      <li class = "<%= menu_item_four %>"><a href="#">Dingdong</a></li>
+      <li class = "<%= "active" if  @title == "home"%>"><a href="/">Pflanzenauswahl</a></li>
+      <li class = "<%= "active" if  @title == "palmi" %>"><a href="/palmi">Palmi-Daten</a></li>
+      <li class = "<%= "active" if  @title == "tatutata" %>"><a href="#">Tatütata</a></li>
+      <li class = "<%= "active" if  @title == "dingdong" %>"><a href="#">Dingdong</a></li>
     </ul>
   </div>
   <div class="information">
@@ -34,17 +22,19 @@
     <p>Wähle die gewünschte Pflanze aus:</p>
     <ul class="large-block-grid-4">
       <li>
-        <a class="th" href = "/palmi">
-          <img class = "imageStyle" src="/palmi.jpg" alt="Palmi">
+        <a href = "/palmi">
+          <img class = "thumbnail" src="/palmi.png" alt="Palmi">
         </a>
       </li>
       <li>
         <a href = "/palmi">
-          <img class="imageStyle" src="/hausi.jpg" alt="Hausi">
+          <img class="thumbnail" src="/hausi.png" alt="Hausi">
         </a>
       </li>
     </ul>
   </div>
-
+  <% @tasks.each do |task| %>
+    <%= task.name %><br>
+  <% end %>
 </body>
 </html>
