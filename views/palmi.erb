@@ -14,33 +14,35 @@
     <ul class = "menu">
       <li class = "<%= "active" if  @title == "home"%>"><a href="/">Pflanzenauswahl</a></li>
       <li class = "<%= "active" if  @title == "palmi" %>"><a href="/palmi">Palmi-Daten</a></li>
-      <li class = "<%= "active" if  @title == "tatutata" %>"><a href="#">Tatütata</a></li>
+      <li class = "<%= "active" if  @title == "javascriptex" %>"><a href="#">Tatütata</a></li>
       <li class = "<%= "active" if  @title == "dingdong" %>"><a href="#">Dingdong</a></li>
     </ul>
   </div>
   <div class = "information">
-    <h1>Pflanzen-Cockpit von Palmi</h1>
-    <img class = "thumbnail" src="palmi.jpg" alt="Palmi">
-    <%= pie_chart({"Wasser" => @water_level, "Trockenheit" => 1-@water_level}) %><br/>
-  </div>
-  <div class = "table-scroll" style="width:400px, ">
-    <h2>Aktuelle Daten von Palmi</h2>
-    <table class="table hover">
-      <thead>
-        <tr>
-          <th style = "width:200px">Sensor</th>
-          <th style = "width:200px">Wert</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @tasks.each do |task|%>
-           <tr>
-             <td><%= task.name %></td>
-             <td><%= task.completed %></td>
-           </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</body>
-</html>
+    <h1>Pflanzen-Cockpit von <%= @title.capitalize %></h1>
+    <img class = "thumbnail" src="palmi.jpg" alt="Palmi">  </div>
+    <h4>Aktuelle Daten von <%= @title.capitalize %></h4>
+    <div class = "table-scroll" style="width:400px, ">
+      <table class="table hover">
+        <thead>
+          <tr>
+            <th style = "width:200px">ID</th>
+            <th style = "width:200px">Sensorname</th>
+            <th style = "width:200px">Sensorwert</th>
+            <th style = "width:200px">Zeitstempel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @tasks.each do |task|%>
+          <tr>
+            <td><%= task.id %></td>
+            <td><%= task.name %></td>
+            <td><%= task.value %></td>
+            <td><%= task.completed_at %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  </html>

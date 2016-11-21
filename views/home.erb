@@ -13,7 +13,7 @@
     <ul class = "menu">
       <li class = "<%= "active" if  @title == "home"%>"><a href="/">Pflanzenauswahl</a></li>
       <li class = "<%= "active" if  @title == "palmi" %>"><a href="/palmi">Palmi-Daten</a></li>
-      <li class = "<%= "active" if  @title == "tatutata" %>"><a href="#">Tatütata</a></li>
+      <li class = "<%= "active" if  @title == "javascriptex" %>"><a href="/javascriptex">JavaScript Versuch</a></li>
       <li class = "<%= "active" if  @title == "dingdong" %>"><a href="#">Dingdong</a></li>
     </ul>
   </div>
@@ -33,8 +33,5 @@
       </li>
     </ul>
   </div>
-  <% @tasks.each do |task| %>
-    <%= task.name %><br>
-  <% end %>
 </body>
 </html>
